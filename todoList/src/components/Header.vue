@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style>
-
+h4{
+  font-style: italic;
+}
 </style>
