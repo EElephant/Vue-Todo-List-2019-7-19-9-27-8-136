@@ -1,25 +1,22 @@
 <template>
     <div>
-        <input id="inputText"/><button id="addButton">Add</button>
+        <InputBar></InputBar>
+        <ListContainer></ListContainer>
     </div>
 </template>
 
 <script>
+import InputBar from './InputBar'
+import ListContainer from './ListContainer'
 export default {
-    
+    components:{
+        InputBar,
+        ListContainer
+    }
 }
 </script>
 
 <style>
-#inputText{
-  width: 500px;
-  height: 30px;
-}
-#addButton{
-  width: 70px;
-  height: 40px;
-  color: white;
-  background-color: #fc999b;
-}
+
 </style>
 

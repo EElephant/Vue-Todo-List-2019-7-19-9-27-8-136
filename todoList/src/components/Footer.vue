@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="Footer">
         <ul>
             <li>
                 <a href="#">All</a>
@@ -31,10 +31,14 @@ li a {
 }
 li {
     text-align: -webkit-match-parent;
-     display: inline;
+    display: inline;
     margin: 0 0 5px 0;
     padding: 8px;
     list-style: none;
     outline: none;
+}
+#Footer{
+    margin-left: 100px;
+    width: 350px;
 }
 </style>
