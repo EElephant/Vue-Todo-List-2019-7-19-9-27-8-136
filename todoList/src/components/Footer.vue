@@ -2,20 +2,42 @@
     <div id="Footer">
         <ul>
             <li>
-                <a href="#">All</a>
+                <a @click="displayAll">All</a>
             </li>
             <li>
-                <a href="#">Active</a>
+                <a @click="filterActive">Active</a>
             </li>
             <li>
-                <a href="#">Complete</a>
+                <a @click="filterComplete">Complete</a>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+
+import store from '../store'
+
 export default {
+    data(){
+        return {
+            activeButtonFlag: '',
+            buttonAll: 'ALL',
+            buttonActive: 'ACTIVE',
+            buttonComplete: 'COMPLETE'
+        }
+    },
+    methods:{
+        filterActive(){
+            this.$store.commit('changeActiveButton', this.buttonActive)
+        },
+        filterComplete(){
+            this.$store.commit('changeActiveButton', this.buttonComplete)
+        },
+        displayAll(){
+            this.$store.commit('changeActiveButton', this.buttonAll)
+        }
+    }
     
 }
 </script>

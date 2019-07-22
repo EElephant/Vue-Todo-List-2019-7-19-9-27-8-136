@@ -1,12 +1,30 @@
 <template>
     <div>
-        <input id="inputText"/><button id="addButton">Add</button>
+        <input id="inputText" v-model="value" @keypress.enter="addByKeypress"/>
+        <button id="addButton" @click="handleClickAdd">Add</button>
     </div>
 </template>
 
 <script>
 export default {
-    
+    data(){
+        return{
+            value:''
+        }
+    },
+    methods:{
+        handleClickAdd(){
+            let item = {
+                value: this.value,
+                editable: false,
+                finished: false
+            }
+            this.$store.commit('addAllitems', item);
+        },
+        addByKeypress(){
+            this.handleClickAdd()
+        }
+    }
 }
 </script>
 
