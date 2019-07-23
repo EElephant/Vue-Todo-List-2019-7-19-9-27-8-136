@@ -18,16 +18,6 @@ const getId = () => {
 
 export default {
   name: 'App',
-  methods:{
-      returnList(val){
-        const item= {
-          val,
-          id:getId(),
-          editable: false
-        }
-        this.list.push(item)
-      }
-  },
   components:{
     Header,
     Body,

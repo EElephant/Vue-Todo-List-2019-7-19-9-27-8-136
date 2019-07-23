@@ -11,20 +11,6 @@ import ListContainer from './ListContainer'
 
 
 export default {
-    data(){
-        return{
-            
-        }
-    },
-    methods:{
-        returnList(val){
-            const item= {
-                val,
-                finished:false,
-            }
-            this.$emit("push",item);
-        }
-    },
     components:{
         InputBar,
         ListContainer
