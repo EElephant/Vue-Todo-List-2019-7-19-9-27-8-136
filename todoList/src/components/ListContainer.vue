@@ -2,13 +2,11 @@
     <div>
         <ol>
             <li v-for="(item,index) in list" :key="index"
-                class="test"
+                class="active"
                 v-bind:class="{unactive: item.finished}">
                 <span>{{index+1+'.'}}</span>
                 <input v-model="item.finished" type="checkbox" @click="active(item.finished)"/>
-                
-                <span v-if="!item.editable" @dblclick="edit(item)">{{item.value}}</span>
-                
+                <span v-if="!item.editable" @dblclick="edit(item)">{{item.value}}{{item.finished}}</span>
                 <input autofocus  type="text" v-else v-model="item.value" @keypress.enter="updateItem(item)" @blur="updateItem(item)"/>
             </li>
         </ol>
@@ -89,7 +87,7 @@ ol li span {
     word-break: break-all;
     width: 70%;
 }
-.test{
+.active{
     
     font-size: 15px
 }

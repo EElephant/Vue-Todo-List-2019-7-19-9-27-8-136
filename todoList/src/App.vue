@@ -11,22 +11,12 @@ import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 
-let id=0;
-const getId = () => {
-  return id++;
-}
-
 export default {
   name: 'App',
   components:{
     Header,
     Body,
     Footer
-  },
-  computed: {
-    list () {
-      return this.$store.state.allItems;
-    }
   }
 }
 </script>

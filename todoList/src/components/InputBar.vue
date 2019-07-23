@@ -20,6 +20,7 @@ export default {
                 finished: false
             }
             this.$store.commit('addAllitems', item);
+            this.value=''
         },
         addByKeypress(){
             this.handleClickAdd()
